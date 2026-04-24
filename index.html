@@ -845,16 +845,20 @@ async function saveReflection(locationId, answers) {
   const docId = getDocId();
   const docRef = db.collection('students').doc(docId);
 
-  const updateData = {};
-  updateData[`reflections.${locationId}`] = {
-    answers: answers,
-    timestamp: firebase.firestore.FieldValue.serverTimestamp()
-  };
-  updateData['name'] = currentUser.name;
-  updateData['class'] = currentUser.class;
-  updateData['number'] = currentUser.number;
+  // 1) 학생 기본 정보 저장 (문서가 없으면 생성)
+  await docRef.set({
+    name: currentUser.name,
+    class: currentUser.class,
+    number: currentUser.number
+  }, { merge: true });
 
-  await docRef.set(updateData, { merge: true });
+  // 2) update()의 dot notation으로 중첩 필드 저장
+  await docRef.update({
+    [`reflections.${locationId}`]: {
+      answers: answers,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    }
+  });
 }
 
 async function getReflection(locationId) {
