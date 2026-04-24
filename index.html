@@ -27,8 +27,6 @@ body {
   color: var(--text);
   min-height: 100vh;
 }
-
-/* Header */
 .header {
   background: linear-gradient(135deg, var(--primary), #7c3aed);
   color: white;
@@ -40,8 +38,6 @@ body {
 }
 .header h1 { font-size: 1.3rem; }
 .header p { font-size: 0.8rem; opacity: 0.85; margin-top: 2px; }
-
-/* Login */
 .login-screen {
   display: flex;
   flex-direction: column;
@@ -72,10 +68,7 @@ body {
   margin-bottom: 16px;
   transition: border-color 0.2s;
 }
-.login-box input:focus, .login-box select:focus {
-  outline: none;
-  border-color: var(--primary);
-}
+.login-box input:focus, .login-box select:focus { outline: none; border-color: var(--primary); }
 .btn {
   display: inline-block;
   padding: 12px 28px;
@@ -86,306 +79,216 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
-.btn-primary {
-  background: var(--primary);
-  color: white;
-  width: 100%;
-}
+.btn-primary { background: var(--primary); color: white; width: 100%; }
 .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
 .btn-admin {
-  background: none;
-  color: var(--text-light);
-  font-size: 0.85rem;
-  margin-top: 16px;
-  text-decoration: underline;
-  cursor: pointer;
-  border: none;
+  background: none; color: var(--text-light); font-size: 0.85rem;
+  margin-top: 16px; text-decoration: underline; cursor: pointer; border: none;
 }
-
-/* Bottom Nav */
 .bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  display: flex;
-  border-top: 1px solid var(--border);
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
-  z-index: 100;
+  position: fixed; bottom: 0; left: 0; right: 0; background: white;
+  display: flex; border-top: 1px solid var(--border);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05); z-index: 100;
 }
 .nav-item {
-  flex: 1;
-  padding: 10px 0;
-  text-align: center;
-  font-size: 0.7rem;
-  color: var(--text-light);
-  cursor: pointer;
-  transition: color 0.2s;
-  border: none;
-  background: none;
+  flex: 1; padding: 10px 0; text-align: center; font-size: 0.7rem;
+  color: var(--text-light); cursor: pointer; transition: color 0.2s;
+  border: none; background: none;
 }
 .nav-item.active { color: var(--primary); font-weight: 700; }
 .nav-icon { font-size: 1.4rem; display: block; margin-bottom: 2px; }
-
-/* Content */
 .content {
-  padding: 16px;
-  padding-bottom: 80px;
-  max-width: 600px;
-  margin: 0 auto;
+  padding: 16px; padding-bottom: 80px; max-width: 600px; margin: 0 auto;
 }
 .section { display: none; }
 .section.active { display: block; }
-
-/* Cards */
 .card {
-  background: var(--card);
-  border-radius: 14px;
-  padding: 18px;
-  margin-bottom: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  cursor: pointer;
-  transition: all 0.2s;
-  border-left: 4px solid var(--primary);
+  background: var(--card); border-radius: 14px; padding: 18px; margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); cursor: pointer;
+  transition: all 0.2s; border-left: 4px solid var(--primary);
 }
 .card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
 .card-title { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
 .card-desc { font-size: 0.85rem; color: var(--text-light); }
 .card-badge {
-  display: inline-block;
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  margin-top: 8px;
+  display: inline-block; padding: 3px 10px; border-radius: 20px;
+  font-size: 0.7rem; font-weight: 600; margin-top: 8px;
 }
 .badge-day1 { background: #dbeafe; color: var(--day1); }
 .badge-day2 { background: #ede9fe; color: var(--day2); }
 .badge-day3 { background: #cffafe; color: var(--day3); }
 .badge-info { background: #fef3c7; color: #92400e; }
-.badge-saved { background: #dcfce7; color: var(--success); }
-
-/* Detail View */
 .detail-view {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: var(--bg);
-  z-index: 200;
-  overflow-y: auto;
+  display: none; position: fixed; inset: 0; background: var(--bg);
+  z-index: 200; overflow-y: auto;
 }
 .detail-view.active { display: block; }
 .detail-header {
   background: linear-gradient(135deg, var(--primary), #7c3aed);
-  color: white;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  position: sticky;
-  top: 0;
+  color: white; padding: 16px 20px; display: flex;
+  align-items: center; gap: 12px; position: sticky; top: 0;
 }
 .back-btn {
-  background: rgba(255,255,255,0.2);
-  border: none;
-  color: white;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: rgba(255,255,255,0.2); border: none; color: white;
+  width: 36px; height: 36px; border-radius: 50%; font-size: 1.2rem;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
 }
 .detail-body { padding: 20px; max-width: 600px; margin: 0 auto; }
 .detail-body h2 { margin-bottom: 16px; font-size: 1.2rem; }
-.detail-body p, .detail-body li {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: var(--text);
-}
+.detail-body p, .detail-body li { font-size: 0.95rem; line-height: 1.7; color: var(--text); }
 .detail-body ul { padding-left: 20px; margin-bottom: 16px; }
 .detail-body li { margin-bottom: 6px; }
 .info-box {
-  background: #f0f9ff;
-  border: 1px solid #bae6fd;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 16px;
+  background: #f0f9ff; border: 1px solid #bae6fd;
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
 }
 .info-box h3 { color: var(--primary); margin-bottom: 8px; font-size: 1rem; }
 .warning-box {
-  background: #fef3c7;
-  border: 1px solid #fde68a;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 16px;
+  background: #fef3c7; border: 1px solid #fde68a;
+  border-radius: 12px; padding: 16px; margin-bottom: 16px;
 }
 .warning-box h3 { color: #92400e; margin-bottom: 8px; font-size: 1rem; }
-
-/* Learning Form */
 textarea {
-  width: 100%;
-  padding: 14px;
-  border: 2px solid var(--border);
-  border-radius: 12px;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  resize: vertical;
-  min-height: 150px;
-  font-family: inherit;
-  margin-bottom: 12px;
+  width: 100%; padding: 14px; border: 2px solid var(--border);
+  border-radius: 12px; font-size: 0.95rem; line-height: 1.6;
+  resize: vertical; min-height: 150px; font-family: inherit; margin-bottom: 12px;
 }
 textarea:focus { outline: none; border-color: var(--primary); }
 .btn-save {
-  background: var(--success);
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  width: 100%;
+  background: var(--success); color: white; padding: 12px 24px;
+  border: none; border-radius: 10px; font-size: 1rem;
+  font-weight: 600; cursor: pointer; width: 100%;
 }
 .btn-save:hover { background: #15803d; }
 .btn-save:disabled { background: #9ca3af; cursor: not-allowed; }
 .saved-indicator {
-  text-align: center;
-  color: var(--success);
-  font-size: 0.85rem;
-  margin-top: 8px;
-  display: none;
+  text-align: center; color: var(--success); font-size: 0.85rem;
+  margin-top: 8px; display: none;
 }
 .saved-indicator.show { display: block; }
-
-/* Section Title */
 .section-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin: 20px 0 12px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--border);
+  font-size: 1.1rem; font-weight: 700; margin: 20px 0 12px;
+  padding-bottom: 8px; border-bottom: 2px solid var(--border);
 }
 .section-title:first-child { margin-top: 4px; }
-
-/* Admin */
-.admin-panel { padding: 20px; }
 .student-card {
-  background: white;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  background: white; border-radius: 12px; padding: 16px;
+  margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 .student-card h3 { color: var(--primary); margin-bottom: 10px; }
-.reflection-item {
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-}
+.reflection-item { padding: 10px 0; border-bottom: 1px solid var(--border); }
 .reflection-item:last-child { border-bottom: none; }
 .reflection-label { font-weight: 600; font-size: 0.85rem; color: var(--text-light); }
 .reflection-text { font-size: 0.9rem; margin-top: 4px; line-height: 1.5; white-space: pre-wrap; }
 .btn-export {
-  background: var(--primary);
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  margin-bottom: 20px;
+  background: var(--primary); color: white; padding: 12px 24px;
+  border: none; border-radius: 10px; font-size: 1rem;
+  font-weight: 600; cursor: pointer; margin-bottom: 20px;
 }
 .btn-export:hover { background: var(--primary-dark); }
-.empty-state {
-  text-align: center;
-  padding: 40px 20px;
-  color: var(--text-light);
+.btn-refresh {
+  background: var(--success); color: white; padding: 12px 24px;
+  border: none; border-radius: 10px; font-size: 1rem;
+  font-weight: 600; cursor: pointer; margin-bottom: 20px;
 }
+.btn-refresh:hover { background: #15803d; }
+.empty-state { text-align: center; padding: 40px 20px; color: var(--text-light); }
 .empty-state .icon { font-size: 3rem; margin-bottom: 12px; }
-
-/* Schedule Table */
-.schedule-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.85rem;
-  margin-bottom: 16px;
-}
-.schedule-table th {
-  background: var(--primary);
-  color: white;
-  padding: 10px 8px;
-  text-align: left;
-}
-.schedule-table td {
-  padding: 10px 8px;
-  border-bottom: 1px solid var(--border);
-}
+.schedule-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-bottom: 16px; }
+.schedule-table th { background: var(--primary); color: white; padding: 10px 8px; text-align: left; }
+.schedule-table td { padding: 10px 8px; border-bottom: 1px solid var(--border); }
 .schedule-table tr:nth-child(even) { background: #f8fafc; }
-
-/* Admin filter */
-.filter-bar {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-}
+.filter-bar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
 .filter-bar select, .filter-bar input {
-  padding: 8px 12px;
-  border: 2px solid var(--border);
-  border-radius: 8px;
-  font-size: 0.9rem;
+  padding: 8px 12px; border: 2px solid var(--border); border-radius: 8px; font-size: 0.9rem;
 }
-
-/* Loading */
-.loading-spinner {
-  text-align: center;
-  padding: 20px;
-  color: var(--text-light);
-}
+.loading-spinner { text-align: center; padding: 20px; color: var(--text-light); }
 .loading-spinner::after {
-  content: '';
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 3px solid var(--border);
-  border-top-color: var(--primary);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-  vertical-align: middle;
-  margin-left: 8px;
+  content: ''; display: inline-block; width: 20px; height: 20px;
+  border: 3px solid var(--border); border-top-color: var(--primary);
+  border-radius: 50%; animation: spin 0.8s linear infinite;
+  vertical-align: middle; margin-left: 8px;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
-
-/* Toast */
 .toast {
-  position: fixed;
-  bottom: 80px;
-  left: 50%;
+  position: fixed; bottom: 80px; left: 50%;
   transform: translateX(-50%) translateY(100px);
-  background: #1e293b;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  z-index: 999;
-  transition: transform 0.3s ease;
-  white-space: nowrap;
+  background: #1e293b; color: white; padding: 12px 24px;
+  border-radius: 10px; font-size: 0.9rem; z-index: 999;
+  transition: transform 0.3s ease; white-space: nowrap;
 }
 .toast.show { transform: translateX(-50%) translateY(0); }
 .toast.error { background: var(--danger); }
 
+/* ★ 사진 업로드 관련 스타일 */
+.photo-section { margin-top: 20px; margin-bottom: 16px; }
+.photo-section h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
+.photo-upload-area {
+  border: 2px dashed var(--border); border-radius: 12px; padding: 24px;
+  text-align: center; cursor: pointer; transition: all 0.2s; margin-bottom: 12px;
+}
+.photo-upload-area:hover { border-color: var(--primary); background: #f0f9ff; }
+.photo-upload-area .upload-icon { font-size: 2rem; margin-bottom: 8px; }
+.photo-upload-area p { font-size: 0.85rem; color: var(--text-light); }
+.photo-upload-area input { display: none; }
+.photo-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px;
+}
+.photo-thumb {
+  position: relative; aspect-ratio: 1; border-radius: 10px; overflow: hidden;
+}
+.photo-thumb img {
+  width: 100%; height: 100%; object-fit: cover; cursor: pointer;
+}
+.photo-thumb .delete-photo {
+  position: absolute; top: 4px; right: 4px; width: 24px; height: 24px;
+  background: rgba(239,68,68,0.9); color: white; border: none;
+  border-radius: 50%; font-size: 0.8rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.photo-uploading {
+  display: flex; align-items: center; gap: 8px; padding: 8px 0;
+  font-size: 0.85rem; color: var(--text-light);
+}
+.photo-progress {
+  flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;
+}
+.photo-progress-bar {
+  height: 100%; background: var(--primary); border-radius: 3px;
+  transition: width 0.3s;
+}
+.photo-count { font-size: 0.8rem; color: var(--text-light); margin-bottom: 8px; }
+
+/* 사진 전체보기 모달 */
+.photo-modal {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9);
+  z-index: 500; align-items: center; justify-content: center;
+}
+.photo-modal.active { display: flex; }
+.photo-modal img { max-width: 95%; max-height: 90vh; object-fit: contain; border-radius: 8px; }
+.photo-modal-close {
+  position: absolute; top: 16px; right: 16px; width: 40px; height: 40px;
+  background: rgba(255,255,255,0.2); color: white; border: none;
+  border-radius: 50%; font-size: 1.5rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* 관리자 사진 목록 */
+.admin-photos {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;
+}
+.admin-photos img {
+  width: 60px; height: 60px; object-fit: cover; border-radius: 6px; cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .content { padding: 24px; }
+  .photo-grid { grid-template-columns: repeat(4, 1fr); }
 }
 </style>
 </head>
 <body>
 
-<!-- Login Screen -->
 <div id="loginScreen" class="login-screen">
   <div class="login-box">
     <h1>제주도 체험학습</h1>
@@ -395,12 +298,9 @@ textarea:focus { outline: none; border-color: var(--primary); }
     <label for="studentClass">반</label>
     <select id="studentClass">
       <option value="">반을 선택하세요</option>
-      <option value="1반">1반</option>
-      <option value="2반">2반</option>
-      <option value="3반">3반</option>
-      <option value="4반">4반</option>
-      <option value="5반">5반</option>
-      <option value="6반">6반</option>
+      <option value="1반">1반</option><option value="2반">2반</option>
+      <option value="3반">3반</option><option value="4반">4반</option>
+      <option value="5반">5반</option><option value="6반">6반</option>
     </select>
     <label for="studentNumber">번호</label>
     <input type="number" id="studentNumber" placeholder="번호를 입력하세요" min="1" max="40">
@@ -409,164 +309,81 @@ textarea:focus { outline: none; border-color: var(--primary); }
   </div>
 </div>
 
-<!-- Main App -->
 <div id="mainApp" style="display:none;">
   <div class="header">
     <h1>제주도 체험학습</h1>
     <p id="userInfo"></p>
   </div>
-
   <div class="content">
-    <!-- 1. 안내 섹션 -->
     <div id="sectionGuide" class="section active">
       <div class="section-title">안내</div>
-      <div class="card" onclick="openDetail('flight')">
-        <div class="card-title">항공편 안내</div>
-        <div class="card-desc">출발/도착 항공편 정보</div>
-        <span class="card-badge badge-info">필수 확인</span>
-      </div>
-      <div class="card" onclick="openDetail('meeting')">
-        <div class="card-title">집결장소 안내</div>
-        <div class="card-desc">집합 시간 및 장소</div>
-        <span class="card-badge badge-info">필수 확인</span>
-      </div>
-      <div class="card" onclick="openDetail('evacuation')">
-        <div class="card-title">객실 비상대피도 안내</div>
-        <div class="card-desc">숙소 비상대피 경로</div>
-      </div>
-      <div class="card" onclick="openDetail('schedule')">
-        <div class="card-title">일정 안내</div>
-        <div class="card-desc">3일간 전체 일정표</div>
-        <span class="card-badge badge-info">필수 확인</span>
-      </div>
-      <div class="card" onclick="openDetail('notice')">
-        <div class="card-title">유의사항 안내</div>
-        <div class="card-desc">준비물 및 주의사항</div>
-      </div>
-      <div class="card" onclick="openDetail('safety')">
-        <div class="card-title">안전교육</div>
-        <div class="card-desc">안전수칙 및 비상연락처</div>
-        <span class="card-badge badge-info">필수 확인</span>
-      </div>
+      <div class="card" onclick="openDetail('flight')"><div class="card-title">항공편 안내</div><div class="card-desc">출발/도착 항공편 정보</div><span class="card-badge badge-info">필수 확인</span></div>
+      <div class="card" onclick="openDetail('meeting')"><div class="card-title">집결장소 안내</div><div class="card-desc">집합 시간 및 장소</div><span class="card-badge badge-info">필수 확인</span></div>
+      <div class="card" onclick="openDetail('evacuation')"><div class="card-title">객실 비상대피도 안내</div><div class="card-desc">숙소 비상대피 경로</div></div>
+      <div class="card" onclick="openDetail('schedule')"><div class="card-title">일정 안내</div><div class="card-desc">3일간 전체 일정표</div><span class="card-badge badge-info">필수 확인</span></div>
+      <div class="card" onclick="openDetail('notice')"><div class="card-title">유의사항 안내</div><div class="card-desc">준비물 및 주의사항</div></div>
+      <div class="card" onclick="openDetail('safety')"><div class="card-title">안전교육</div><div class="card-desc">안전수칙 및 비상연락처</div><span class="card-badge badge-info">필수 확인</span></div>
     </div>
-
-    <!-- 2. 학습 섹션 -->
     <div id="sectionLearn" class="section">
       <div class="section-title">1일차</div>
-      <div class="card" style="border-left-color: var(--day1);" onclick="openLearning('hallim', '한림공원', 1)">
-        <div class="card-title">한림공원</div>
-        <div class="card-desc">아열대 식물원, 동굴 탐방</div>
-        <span class="card-badge badge-day1">1일차</span>
-      </div>
-      <div class="card" style="border-left-color: var(--day1);" onclick="openLearning('geumneung', '금능해변', 1)">
-        <div class="card-title">금능해변</div>
-        <div class="card-desc">해변 자연 관찰</div>
-        <span class="card-badge badge-day1">1일차</span>
-      </div>
-
+      <div class="card" style="border-left-color:var(--day1)" onclick="openLearning('hallim')"><div class="card-title">한림공원</div><div class="card-desc">아열대 식물원, 동굴 탐방</div><span class="card-badge badge-day1">1일차</span></div>
+      <div class="card" style="border-left-color:var(--day1)" onclick="openLearning('geumneung')"><div class="card-title">금능해변</div><div class="card-desc">해변 자연 관찰</div><span class="card-badge badge-day1">1일차</span></div>
       <div class="section-title">2일차</div>
-      <div class="card" style="border-left-color: var(--day2);" onclick="openLearning('jusangjeolli', '주상절리', 2)">
-        <div class="card-title">주상절리</div>
-        <div class="card-desc">지질학적 자연 경관</div>
-        <span class="card-badge badge-day2">2일차</span>
-      </div>
-      <div class="card" style="border-left-color: var(--day2);" onclick="openLearning('jejujet', '제주제트', 2)">
-        <div class="card-title">제주제트</div>
-        <div class="card-desc">체험 활동</div>
-        <span class="card-badge badge-day2">2일차</span>
-      </div>
-      <div class="card" style="border-left-color: var(--day2);" onclick="openLearning('park981', '9.81파크', 2)">
-        <div class="card-title">9.81파크</div>
-        <div class="card-desc">과학 체험 테마파크</div>
-        <span class="card-badge badge-day2">2일차</span>
-      </div>
-      <div class="card" style="border-left-color: var(--day2);" onclick="openLearning('cheonjeyeon', '천제연폭포', 2)">
-        <div class="card-title">천제연폭포</div>
-        <div class="card-desc">자연 생태 탐방</div>
-        <span class="card-badge badge-day2">2일차</span>
-      </div>
-
+      <div class="card" style="border-left-color:var(--day2)" onclick="openLearning('jusangjeolli')"><div class="card-title">주상절리</div><div class="card-desc">지질학적 자연 경관</div><span class="card-badge badge-day2">2일차</span></div>
+      <div class="card" style="border-left-color:var(--day2)" onclick="openLearning('jejujet')"><div class="card-title">제주제트</div><div class="card-desc">체험 활동</div><span class="card-badge badge-day2">2일차</span></div>
+      <div class="card" style="border-left-color:var(--day2)" onclick="openLearning('park981')"><div class="card-title">9.81파크</div><div class="card-desc">과학 체험 테마파크</div><span class="card-badge badge-day2">2일차</span></div>
+      <div class="card" style="border-left-color:var(--day2)" onclick="openLearning('cheonjeyeon')"><div class="card-title">천제연폭포</div><div class="card-desc">자연 생태 탐방</div><span class="card-badge badge-day2">2일차</span></div>
       <div class="section-title">3일차</div>
-      <div class="card" style="border-left-color: var(--day3);" onclick="openLearning('stonepark', '제주돌문화공원', 3)">
-        <div class="card-title">제주돌문화공원</div>
-        <div class="card-desc">제주 전통 문화 체험</div>
-        <span class="card-badge badge-day3">3일차</span>
-      </div>
-      <div class="card" style="border-left-color: var(--day3);" onclick="openLearning('peace43', '4.3평화공원', 3)">
-        <div class="card-title">4.3평화공원</div>
-        <div class="card-desc">역사 학습 및 추모</div>
-        <span class="card-badge badge-day3">3일차</span>
-      </div>
-      <div class="card" style="border-left-color: var(--day3);" onclick="openLearning('mazeland', '메이즈랜드', 3)">
-        <div class="card-title">메이즈랜드</div>
-        <div class="card-desc">미로 체험 활동</div>
-        <span class="card-badge badge-day3">3일차</span>
-      </div>
+      <div class="card" style="border-left-color:var(--day3)" onclick="openLearning('stonepark')"><div class="card-title">제주돌문화공원</div><div class="card-desc">제주 전통 문화 체험</div><span class="card-badge badge-day3">3일차</span></div>
+      <div class="card" style="border-left-color:var(--day3)" onclick="openLearning('peace43')"><div class="card-title">4.3평화공원</div><div class="card-desc">역사 학습 및 추모</div><span class="card-badge badge-day3">3일차</span></div>
+      <div class="card" style="border-left-color:var(--day3)" onclick="openLearning('mazeland')"><div class="card-title">메이즈랜드</div><div class="card-desc">미로 체험 활동</div><span class="card-badge badge-day3">3일차</span></div>
     </div>
-
-    <!-- 3. 관리 섹션 (관리자 전용) -->
     <div id="sectionAdmin" class="section">
       <div class="section-title">학생 소감 관리</div>
       <div class="filter-bar">
-        <select id="filterClass" onchange="renderAdmin()">
+        <select id="filterClass" onchange="filterAndRenderAdmin()">
           <option value="">전체 반</option>
-          <option value="1반">1반</option>
-          <option value="2반">2반</option>
-          <option value="3반">3반</option>
-          <option value="4반">4반</option>
-          <option value="5반">5반</option>
-          <option value="6반">6반</option>
+          <option value="1반">1반</option><option value="2반">2반</option>
+          <option value="3반">3반</option><option value="4반">4반</option>
+          <option value="5반">5반</option><option value="6반">6반</option>
         </select>
-        <input type="text" id="filterName" placeholder="이름 검색" oninput="renderAdmin()">
+        <input type="text" id="filterName" placeholder="이름 검색" oninput="filterAndRenderAdmin()">
+        <button class="btn-refresh" onclick="renderAdmin()">새로고침</button>
         <button class="btn-export" onclick="exportData()">문서로 내보내기</button>
       </div>
       <div id="adminContent"></div>
     </div>
   </div>
-
-  <!-- Bottom Navigation -->
   <div class="bottom-nav">
-    <button class="nav-item active" onclick="switchTab('guide')">
-      <span class="nav-icon">📋</span>안내
-    </button>
-    <button class="nav-item" onclick="switchTab('learn')">
-      <span class="nav-icon">📝</span>학습
-    </button>
-    <button class="nav-item" id="adminTab" style="display:none;" onclick="switchTab('admin')">
-      <span class="nav-icon">⚙️</span>관리
-    </button>
+    <button class="nav-item active" onclick="switchTab('guide')"><span class="nav-icon">📋</span>안내</button>
+    <button class="nav-item" onclick="switchTab('learn')"><span class="nav-icon">📝</span>학습</button>
+    <button class="nav-item" id="adminTab" style="display:none" onclick="switchTab('admin')"><span class="nav-icon">⚙️</span>관리</button>
   </div>
 </div>
 
-<!-- Detail View -->
 <div id="detailView" class="detail-view">
-  <div class="detail-header">
-    <button class="back-btn" onclick="closeDetail()">←</button>
-    <h2 id="detailTitle"></h2>
-  </div>
+  <div class="detail-header"><button class="back-btn" onclick="closeDetail()">←</button><h2 id="detailTitle"></h2></div>
   <div class="detail-body" id="detailBody"></div>
 </div>
 
-<!-- Learning View -->
 <div id="learningView" class="detail-view">
-  <div class="detail-header">
-    <button class="back-btn" onclick="closeLearning()">←</button>
-    <h2 id="learningTitle"></h2>
-  </div>
+  <div class="detail-header"><button class="back-btn" onclick="closeLearning()">←</button><h2 id="learningTitle"></h2></div>
   <div class="detail-body" id="learningBody"></div>
 </div>
 
-<!-- Toast -->
+<div id="photoModal" class="photo-modal" onclick="closePhotoModal()">
+  <button class="photo-modal-close" onclick="closePhotoModal()">×</button>
+  <img id="photoModalImg" src="" alt="">
+</div>
+
 <div id="toast" class="toast"></div>
 
 <!-- Firebase SDK -->
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-storage-compat.js"></script>
 
 <script>
-// ==========================================================
-// ★★★ Firebase 설정 - 아래 값을 본인의 Firebase 프로젝트 설정으로 교체하세요 ★★★
-// ==========================================================
 const firebaseConfig = {
   apiKey: "AIzaSyDibhV_O5mPcg2hQGKgqaVR8XNv8feQP3g",
   authDomain: "field-trip-f0e17.firebaseapp.com",
@@ -576,286 +393,129 @@ const firebaseConfig = {
   appId: "1:64002707569:web:e29e6546d092d271e80bd0",
   measurementId: "G-YZPZN3K106"
 };
-// ==========================================================
 
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+const storage = firebase.storage();
+
+db.enablePersistence({ synchronizeTabs: true }).catch(err => {
+  console.warn('오프라인 캐시:', err.code);
+});
+
+// ==================== CONSTANTS ====================
+const MAX_PHOTOS = 3; // 장소당 최대 사진 수
+const RESIZE_WIDTH = 800;
+const JPEG_QUALITY = 0.8;
 
 // ==================== DATA ====================
 const GUIDE_DATA = {
-  flight: {
-    title: '항공편 안내',
-    content: `
-      <div class="info-box">
-        <h3>가는 편</h3>
-        <p><strong>항공편:</strong> (항공편명 입력)</p>
-        <p><strong>출발:</strong> (출발 공항) → (도착 공항)</p>
-        <p><strong>시간:</strong> (출발 시간) → (도착 시간)</p>
-      </div>
-      <div class="info-box">
-        <h3>오는 편</h3>
-        <p><strong>항공편:</strong> (항공편명 입력)</p>
-        <p><strong>출발:</strong> (출발 공항) → (도착 공항)</p>
-        <p><strong>시간:</strong> (출발 시간) → (도착 시간)</p>
-      </div>
-      <div class="warning-box">
-        <h3>주의사항</h3>
-        <ul>
-          <li>출발 2시간 전까지 공항 도착</li>
-          <li>신분증(학생증) 반드시 지참</li>
-          <li>기내 반입 금지 물품 확인</li>
-        </ul>
-      </div>
-    `
-  },
-  meeting: {
-    title: '집결장소 안내',
-    content: `
-      <div class="info-box">
-        <h3>집결 정보</h3>
-        <p><strong>일시:</strong> (집결 일시 입력)</p>
-        <p><strong>장소:</strong> (집결 장소 입력)</p>
-        <p><strong>집결 시간:</strong> (시간 입력)</p>
-      </div>
-      <div class="warning-box">
-        <h3>안내사항</h3>
-        <ul>
-          <li>집결 시간 10분 전까지 도착</li>
-          <li>반별 인솔 교사 확인</li>
-          <li>짐은 미리 정리하여 준비</li>
-        </ul>
-      </div>
-    `
-  },
-  evacuation: {
-    title: '객실 비상대피도 안내',
-    content: `
-      <div class="warning-box">
-        <h3>비상대피 수칙</h3>
-        <ul>
-          <li>객실 입실 후 비상구 위치를 반드시 확인하세요</li>
-          <li>비상 시 엘리베이터 대신 비상계단을 이용하세요</li>
-          <li>대피 시 젖은 수건으로 코와 입을 가리세요</li>
-          <li>비상 연락처를 확인하고 저장하세요</li>
-        </ul>
-      </div>
-      <div class="info-box">
-        <h3>비상대피 절차</h3>
-        <p>1. 비상벨이 울리면 즉시 대피 준비</p>
-        <p>2. 귀중품보다 안전을 우선시</p>
-        <p>3. 비상계단을 통해 1층으로 이동</p>
-        <p>4. 지정된 대피장소에서 인원 점검</p>
-        <p>5. 인솔교사의 지시에 따라 행동</p>
-      </div>
-    `
-  },
-  schedule: {
-    title: '일정 안내',
-    content: `
-      <h2>1일차</h2>
-      <table class="schedule-table">
-        <tr><th>시간</th><th>일정</th></tr>
-        <tr><td>(시간)</td><td>집결 및 출발</td></tr>
-        <tr><td>(시간)</td><td>공항 도착 / 탑승 수속</td></tr>
-        <tr><td>(시간)</td><td>제주 도착</td></tr>
-        <tr><td>(시간)</td><td>한림공원</td></tr>
-        <tr><td>(시간)</td><td>금능해변</td></tr>
-        <tr><td>(시간)</td><td>숙소 도착 / 저녁식사</td></tr>
-      </table>
-      <h2>2일차</h2>
-      <table class="schedule-table">
-        <tr><th>시간</th><th>일정</th></tr>
-        <tr><td>(시간)</td><td>기상 / 아침식사</td></tr>
-        <tr><td>(시간)</td><td>주상절리</td></tr>
-        <tr><td>(시간)</td><td>제주제트</td></tr>
-        <tr><td>(시간)</td><td>점심식사</td></tr>
-        <tr><td>(시간)</td><td>9.81파크</td></tr>
-        <tr><td>(시간)</td><td>천제연폭포</td></tr>
-        <tr><td>(시간)</td><td>숙소 도착 / 저녁식사</td></tr>
-      </table>
-      <h2>3일차</h2>
-      <table class="schedule-table">
-        <tr><th>시간</th><th>일정</th></tr>
-        <tr><td>(시간)</td><td>기상 / 아침식사 / 퇴실</td></tr>
-        <tr><td>(시간)</td><td>제주돌문화공원</td></tr>
-        <tr><td>(시간)</td><td>4.3평화공원</td></tr>
-        <tr><td>(시간)</td><td>점심식사</td></tr>
-        <tr><td>(시간)</td><td>메이즈랜드</td></tr>
-        <tr><td>(시간)</td><td>공항 이동 / 출발</td></tr>
-        <tr><td>(시간)</td><td>도착 / 해산</td></tr>
-      </table>
-    `
-  },
-  notice: {
-    title: '유의사항 안내',
-    content: `
-      <div class="info-box">
-        <h3>준비물</h3>
-        <ul>
-          <li>학생증 (신분증)</li>
-          <li>세면도구, 여벌 옷</li>
-          <li>편한 운동화</li>
-          <li>필기도구</li>
-          <li>개인 상비약</li>
-          <li>우천 대비 우비/우산</li>
-          <li>자외선 차단제</li>
-        </ul>
-      </div>
-      <div class="warning-box">
-        <h3>유의사항</h3>
-        <ul>
-          <li>단체 행동을 원칙으로 하며 개인 이탈 금지</li>
-          <li>인솔교사의 지시에 따라 행동</li>
-          <li>귀중품 관리에 유의</li>
-          <li>숙소에서 타 반 객실 출입 금지</li>
-          <li>취침 시간 이후 외출 금지</li>
-          <li>자연환경을 훼손하지 않기</li>
-          <li>쓰레기는 반드시 분리수거</li>
-        </ul>
-      </div>
-    `
-  },
-  safety: {
-    title: '안전교육',
-    content: `
-      <div class="warning-box">
-        <h3>일반 안전수칙</h3>
-        <ul>
-          <li>항상 단체로 행동하고 무단이탈 금지</li>
-          <li>위험 지역에 접근하지 않기</li>
-          <li>교통 안전 수칙 준수</li>
-          <li>음식 알레르기가 있는 경우 사전에 알리기</li>
-        </ul>
-      </div>
-      <div class="warning-box">
-        <h3>해변 안전수칙</h3>
-        <ul>
-          <li>해변에서 안전요원의 지시 따르기</li>
-          <li>지정된 구역 외 수영 금지</li>
-          <li>해파리 등 해양 생물 접촉 주의</li>
-          <li>바위 지역 미끄럼 주의</li>
-        </ul>
-      </div>
-      <div class="info-box">
-        <h3>비상연락처</h3>
-        <p><strong>인솔교사:</strong> (연락처 입력)</p>
-        <p><strong>학교:</strong> (연락처 입력)</p>
-        <p><strong>응급:</strong> 119</p>
-        <p><strong>경찰:</strong> 112</p>
-      </div>
-    `
-  }
+  flight: { title: '항공편 안내', content: `<div class="info-box"><h3>가는 편</h3><p><strong>항공편:</strong> (항공편명 입력)</p><p><strong>출발:</strong> (출발 공항) → (도착 공항)</p><p><strong>시간:</strong> (출발 시간) → (도착 시간)</p></div><div class="info-box"><h3>오는 편</h3><p><strong>항공편:</strong> (항공편명 입력)</p><p><strong>출발:</strong> (출발 공항) → (도착 공항)</p><p><strong>시간:</strong> (출발 시간) → (도착 시간)</p></div><div class="warning-box"><h3>주의사항</h3><ul><li>출발 2시간 전까지 공항 도착</li><li>신분증(학생증) 반드시 지참</li><li>기내 반입 금지 물품 확인</li></ul></div>` },
+  meeting: { title: '집결장소 안내', content: `<div class="info-box"><h3>집결 정보</h3><p><strong>일시:</strong> (집결 일시 입력)</p><p><strong>장소:</strong> (집결 장소 입력)</p><p><strong>집결 시간:</strong> (시간 입력)</p></div><div class="warning-box"><h3>안내사항</h3><ul><li>집결 시간 10분 전까지 도착</li><li>반별 인솔 교사 확인</li><li>짐은 미리 정리하여 준비</li></ul></div>` },
+  evacuation: { title: '객실 비상대피도 안내', content: `<div class="warning-box"><h3>비상대피 수칙</h3><ul><li>객실 입실 후 비상구 위치를 반드시 확인하세요</li><li>비상 시 엘리베이터 대신 비상계단을 이용하세요</li><li>대피 시 젖은 수건으로 코와 입을 가리세요</li><li>비상 연락처를 확인하고 저장하세요</li></ul></div><div class="info-box"><h3>비상대피 절차</h3><p>1. 비상벨이 울리면 즉시 대피 준비</p><p>2. 귀중품보다 안전을 우선시</p><p>3. 비상계단을 통해 1층으로 이동</p><p>4. 지정된 대피장소에서 인원 점검</p><p>5. 인솔교사의 지시에 따라 행동</p></div>` },
+  schedule: { title: '일정 안내', content: `<h2>1일차</h2><table class="schedule-table"><tr><th>시간</th><th>일정</th></tr><tr><td>(시간)</td><td>집결 및 출발</td></tr><tr><td>(시간)</td><td>공항 도착 / 탑승 수속</td></tr><tr><td>(시간)</td><td>제주 도착</td></tr><tr><td>(시간)</td><td>한림공원</td></tr><tr><td>(시간)</td><td>금능해변</td></tr><tr><td>(시간)</td><td>숙소 도착 / 저녁식사</td></tr></table><h2>2일차</h2><table class="schedule-table"><tr><th>시간</th><th>일정</th></tr><tr><td>(시간)</td><td>기상 / 아침식사</td></tr><tr><td>(시간)</td><td>주상절리</td></tr><tr><td>(시간)</td><td>제주제트</td></tr><tr><td>(시간)</td><td>점심식사</td></tr><tr><td>(시간)</td><td>9.81파크</td></tr><tr><td>(시간)</td><td>천제연폭포</td></tr><tr><td>(시간)</td><td>숙소 도착 / 저녁식사</td></tr></table><h2>3일차</h2><table class="schedule-table"><tr><th>시간</th><th>일정</th></tr><tr><td>(시간)</td><td>기상 / 아침식사 / 퇴실</td></tr><tr><td>(시간)</td><td>제주돌문화공원</td></tr><tr><td>(시간)</td><td>4.3평화공원</td></tr><tr><td>(시간)</td><td>점심식사</td></tr><tr><td>(시간)</td><td>메이즈랜드</td></tr><tr><td>(시간)</td><td>공항 이동 / 출발</td></tr><tr><td>(시간)</td><td>도착 / 해산</td></tr></table>` },
+  notice: { title: '유의사항 안내', content: `<div class="info-box"><h3>준비물</h3><ul><li>학생증 (신분증)</li><li>세면도구, 여벌 옷</li><li>편한 운동화</li><li>필기도구</li><li>개인 상비약</li><li>우천 대비 우비/우산</li><li>자외선 차단제</li></ul></div><div class="warning-box"><h3>유의사항</h3><ul><li>단체 행동을 원칙으로 하며 개인 이탈 금지</li><li>인솔교사의 지시에 따라 행동</li><li>귀중품 관리에 유의</li><li>숙소에서 타 반 객실 출입 금지</li><li>취침 시간 이후 외출 금지</li><li>자연환경을 훼손하지 않기</li><li>쓰레기는 반드시 분리수거</li></ul></div>` },
+  safety: { title: '안전교육', content: `<div class="warning-box"><h3>일반 안전수칙</h3><ul><li>항상 단체로 행동하고 무단이탈 금지</li><li>위험 지역에 접근하지 않기</li><li>교통 안전 수칙 준수</li><li>음식 알레르기가 있는 경우 사전에 알리기</li></ul></div><div class="warning-box"><h3>해변 안전수칙</h3><ul><li>해변에서 안전요원의 지시 따르기</li><li>지정된 구역 외 수영 금지</li><li>해파리 등 해양 생물 접촉 주의</li><li>바위 지역 미끄럼 주의</li></ul></div><div class="info-box"><h3>비상연락처</h3><p><strong>인솔교사:</strong> (연락처 입력)</p><p><strong>학교:</strong> (연락처 입력)</p><p><strong>응급:</strong> 119</p><p><strong>경찰:</strong> 112</p></div>` }
 };
 
 const LOCATIONS = {
-  hallim: {
-    name: '한림공원', day: 1,
-    desc: '제주도 서쪽에 위치한 아열대 식물원으로, 동굴과 다양한 식물을 관찰할 수 있습니다.',
-    questions: [
-      '한림공원에서 가장 인상 깊었던 장소나 식물은 무엇인가요?',
-      '동굴 탐방에서 느낀 점을 적어보세요.',
-      '이 장소에서 배운 점이나 느낀 점을 자유롭게 작성하세요.'
-    ]
-  },
-  geumneung: {
-    name: '금능해변', day: 1,
-    desc: '맑은 물과 고운 모래가 특징인 제주 서쪽의 아름다운 해변입니다.',
-    questions: [
-      '해변에서 관찰한 자연환경(바다, 모래, 생물 등)에 대해 적어보세요.',
-      '금능해변에서 느낀 감상을 자유롭게 작성하세요.'
-    ]
-  },
-  jusangjeolli: {
-    name: '주상절리', day: 2,
-    desc: '용암이 바닷물에 의해 식으면서 만들어진 기둥 모양의 자연 지형입니다.',
-    questions: [
-      '주상절리가 어떻게 형성되었는지 설명해보세요.',
-      '직접 보고 느낀 자연의 경이로움에 대해 적어보세요.'
-    ]
-  },
-  jejujet: {
-    name: '제주제트', day: 2,
-    desc: '다양한 레저 활동을 체험할 수 있는 곳입니다.',
-    questions: [
-      '어떤 활동을 체험했나요?',
-      '체험 활동에서 느낀 점을 적어보세요.'
-    ]
-  },
-  park981: {
-    name: '9.81파크', day: 2,
-    desc: '중력과 과학 원리를 체험할 수 있는 테마파크입니다.',
-    questions: [
-      '9.81파크에서 체험한 활동 중 가장 재미있었던 것은?',
-      '과학 원리와 연관 지어 느낀 점을 적어보세요.'
-    ]
-  },
-  cheonjeyeon: {
-    name: '천제연폭포', day: 2,
-    desc: '제주도의 대표적인 폭포로, 아름다운 자연 경관을 감상할 수 있습니다.',
-    questions: [
-      '천제연폭포의 자연경관에 대한 감상을 적어보세요.',
-      '자연 보전의 중요성에 대해 느낀 점이 있나요?'
-    ]
-  },
-  stonepark: {
-    name: '제주돌문화공원', day: 3,
-    desc: '제주의 돌문화와 전통을 배울 수 있는 공원입니다.',
-    questions: [
-      '제주 돌문화에 대해 새롭게 알게 된 점은?',
-      '제주의 전통 문화에 대한 느낌을 적어보세요.'
-    ]
-  },
-  peace43: {
-    name: '4.3평화공원', day: 3,
-    desc: '제주 4.3 사건을 기억하고 평화의 가치를 배우는 공간입니다.',
-    questions: [
-      '4.3 사건에 대해 알게 된 점을 적어보세요.',
-      '평화의 의미에 대해 느낀 점을 작성하세요.'
-    ]
-  },
-  mazeland: {
-    name: '메이즈랜드', day: 3,
-    desc: '세계 최대 규모의 미로 테마파크입니다.',
-    questions: [
-      '미로 체험에서 느낀 점을 적어보세요.',
-      '체험학습 전체를 돌아보며 가장 기억에 남는 것은?'
-    ]
-  }
+  hallim: { name: '한림공원', day: 1, desc: '제주도 서쪽에 위치한 아열대 식물원으로, 동굴과 다양한 식물을 관찰할 수 있습니다.', questions: ['한림공원에서 가장 인상 깊었던 장소나 식물은 무엇인가요?','동굴 탐방에서 느낀 점을 적어보세요.','이 장소에서 배운 점이나 느낀 점을 자유롭게 작성하세요.'] },
+  geumneung: { name: '금능해변', day: 1, desc: '맑은 물과 고운 모래가 특징인 제주 서쪽의 아름다운 해변입니다.', questions: ['해변에서 관찰한 자연환경(바다, 모래, 생물 등)에 대해 적어보세요.','금능해변에서 느낀 감상을 자유롭게 작성하세요.'] },
+  jusangjeolli: { name: '주상절리', day: 2, desc: '용암이 바닷물에 의해 식으면서 만들어진 기둥 모양의 자연 지형입니다.', questions: ['주상절리가 어떻게 형성되었는지 설명해보세요.','직접 보고 느낀 자연의 경이로움에 대해 적어보세요.'] },
+  jejujet: { name: '제주제트', day: 2, desc: '다양한 레저 활동을 체험할 수 있는 곳입니다.', questions: ['어떤 활동을 체험했나요?','체험 활동에서 느낀 점을 적어보세요.'] },
+  park981: { name: '9.81파크', day: 2, desc: '중력과 과학 원리를 체험할 수 있는 테마파크입니다.', questions: ['9.81파크에서 체험한 활동 중 가장 재미있었던 것은?','과학 원리와 연관 지어 느낀 점을 적어보세요.'] },
+  cheonjeyeon: { name: '천제연폭포', day: 2, desc: '제주도의 대표적인 폭포로, 아름다운 자연 경관을 감상할 수 있습니다.', questions: ['천제연폭포의 자연경관에 대한 감상을 적어보세요.','자연 보전의 중요성에 대해 느낀 점이 있나요?'] },
+  stonepark: { name: '제주돌문화공원', day: 3, desc: '제주의 돌문화와 전통을 배울 수 있는 공원입니다.', questions: ['제주 돌문화에 대해 새롭게 알게 된 점은?','제주의 전통 문화에 대한 느낌을 적어보세요.'] },
+  peace43: { name: '4.3평화공원', day: 3, desc: '제주 4.3 사건을 기억하고 평화의 가치를 배우는 공간입니다.', questions: ['4.3 사건에 대해 알게 된 점을 적어보세요.','평화의 의미에 대해 느낀 점을 작성하세요.'] },
+  mazeland: { name: '메이즈랜드', day: 3, desc: '세계 최대 규모의 미로 테마파크입니다.', questions: ['미로 체험에서 느낀 점을 적어보세요.','체험학습 전체를 돌아보며 가장 기억에 남는 것은?'] }
 };
 
 // ==================== STATE ====================
 let currentUser = null;
 let isAdmin = false;
 let cachedStudentData = [];
+let currentPhotos = []; // 현재 장소에 업로드된 사진 URL 목록
 
-// ==================== TOAST ====================
-function showToast(message, isError = false) {
-  const toast = document.getElementById('toast');
-  toast.textContent = message;
-  toast.className = isError ? 'toast error show' : 'toast show';
-  setTimeout(() => { toast.className = 'toast'; }, 2500);
+// ==================== UTILS ====================
+function showToast(msg, isError = false) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = isError ? 'toast error show' : 'toast show';
+  setTimeout(() => { t.className = 'toast'; }, 2500);
 }
-
-// ==================== FIREBASE DB HELPERS ====================
+function escapeHtml(text) {
+  const d = document.createElement('div'); d.textContent = text; return d.innerHTML;
+}
 function getDocId() {
   return `${currentUser.class}_${currentUser.number}_${currentUser.name}`;
 }
 
+// ==================== 사진 리사이즈/압축 ====================
+function compressImage(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        let w = img.width;
+        let h = img.height;
+        if (w > RESIZE_WIDTH) {
+          h = Math.round(h * RESIZE_WIDTH / w);
+          w = RESIZE_WIDTH;
+        }
+        canvas.width = w;
+        canvas.height = h;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, w, h);
+        canvas.toBlob(blob => {
+          if (blob) resolve(blob);
+          else reject(new Error('압축 실패'));
+        }, 'image/jpeg', JPEG_QUALITY);
+      };
+      img.onerror = reject;
+      img.src = e.target.result;
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+// ==================== 사진 업로드 ====================
+async function uploadPhoto(file, locationId) {
+  const compressed = await compressImage(file);
+  const fileName = `${getDocId()}/${locationId}/${Date.now()}.jpg`;
+  const ref = storage.ref().child(`photos/${fileName}`);
+  const snapshot = await ref.put(compressed);
+  return await snapshot.ref.getDownloadURL();
+}
+
+async function deletePhoto(photoUrl, locationId) {
+  // Storage에서 삭제
+  try {
+    const ref = storage.refFromURL(photoUrl);
+    await ref.delete();
+  } catch (e) {
+    console.warn('Storage 삭제 실패:', e);
+  }
+  // Firestore에서 URL 제거
+  currentPhotos = currentPhotos.filter(u => u !== photoUrl);
+  const docRef = db.collection('students').doc(getDocId());
+  await docRef.update({
+    [`reflections.${locationId}.photos`]: currentPhotos
+  });
+}
+
+// ==================== FIREBASE DB ====================
 async function saveReflection(locationId, answers) {
   const docId = getDocId();
   const docRef = db.collection('students').doc(docId);
-
-  // 1) 학생 기본 정보 저장 (문서가 없으면 생성)
   await docRef.set({
-    name: currentUser.name,
-    class: currentUser.class,
-    number: currentUser.number
+    name: currentUser.name, class: currentUser.class, number: currentUser.number
   }, { merge: true });
-
-  // 2) update()의 dot notation으로 중첩 필드 저장
   await docRef.update({
     [`reflections.${locationId}`]: {
       answers: answers,
+      photos: currentPhotos,
       timestamp: firebase.firestore.FieldValue.serverTimestamp()
     }
   });
@@ -870,17 +530,13 @@ async function getReflection(locationId) {
   return null;
 }
 
-async function getAllStudentData() {
-  const snapshot = await db.collection('students').orderBy('class').get();
+async function getAllStudentData(fromServer = false) {
+  const options = fromServer ? { source: 'server' } : {};
+  const snapshot = await db.collection('students').orderBy('class').get(options);
   const students = [];
   snapshot.forEach(doc => {
     const data = doc.data();
-    students.push({
-      class: data.class,
-      number: data.number,
-      name: data.name,
-      reflections: data.reflections || {}
-    });
+    students.push({ class: data.class, number: data.number, name: data.name, reflections: data.reflections || {} });
   });
   students.sort((a, b) => {
     if (a.class !== b.class) return a.class.localeCompare(b.class);
@@ -894,70 +550,45 @@ function login() {
   const name = document.getElementById('studentName').value.trim();
   const cls = document.getElementById('studentClass').value;
   const num = document.getElementById('studentNumber').value;
-
-  if (!name || !cls || !num) {
-    alert('모든 항목을 입력해주세요.');
-    return;
-  }
-
+  if (!name || !cls || !num) { alert('모든 항목을 입력해주세요.'); return; }
   currentUser = { name, class: cls, number: num };
   isAdmin = false;
-
   document.getElementById('userInfo').textContent = `${cls} ${num}번 ${name}`;
   document.getElementById('loginScreen').style.display = 'none';
   document.getElementById('mainApp').style.display = 'block';
   document.getElementById('adminTab').style.display = 'none';
 }
-
 function adminLogin() {
-  const password = prompt('관리자 비밀번호를 입력하세요:');
-  if (password === 'admin1234') {
+  const pw = prompt('관리자 비밀번호를 입력하세요:');
+  if (pw === 'admin1234') {
     currentUser = { name: '관리자', class: '관리', number: '0' };
     isAdmin = true;
-
     document.getElementById('userInfo').textContent = '관리자 모드';
     document.getElementById('loginScreen').style.display = 'none';
     document.getElementById('mainApp').style.display = 'block';
     document.getElementById('adminTab').style.display = 'block';
-  } else if (password !== null) {
-    alert('비밀번호가 올바르지 않습니다.');
-  }
+  } else if (pw !== null) { alert('비밀번호가 올바르지 않습니다.'); }
 }
 
-// ==================== NAVIGATION ====================
+// ==================== NAV ====================
 function switchTab(tab) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-
-  if (tab === 'guide') {
-    document.getElementById('sectionGuide').classList.add('active');
-    document.querySelectorAll('.nav-item')[0].classList.add('active');
-  } else if (tab === 'learn') {
-    document.getElementById('sectionLearn').classList.add('active');
-    document.querySelectorAll('.nav-item')[1].classList.add('active');
-  } else if (tab === 'admin') {
-    document.getElementById('sectionAdmin').classList.add('active');
-    document.querySelectorAll('.nav-item')[2].classList.add('active');
-    renderAdmin();
-  }
+  if (tab === 'guide') { document.getElementById('sectionGuide').classList.add('active'); document.querySelectorAll('.nav-item')[0].classList.add('active'); }
+  else if (tab === 'learn') { document.getElementById('sectionLearn').classList.add('active'); document.querySelectorAll('.nav-item')[1].classList.add('active'); }
+  else if (tab === 'admin') { document.getElementById('sectionAdmin').classList.add('active'); document.querySelectorAll('.nav-item')[2].classList.add('active'); renderAdmin(); }
 }
-
-// ==================== DETAIL VIEW ====================
 function openDetail(id) {
-  const data = GUIDE_DATA[id];
-  document.getElementById('detailTitle').textContent = data.title;
-  document.getElementById('detailBody').innerHTML = data.content;
+  document.getElementById('detailTitle').textContent = GUIDE_DATA[id].title;
+  document.getElementById('detailBody').innerHTML = GUIDE_DATA[id].content;
   document.getElementById('detailView').classList.add('active');
 }
+function closeDetail() { document.getElementById('detailView').classList.remove('active'); }
 
-function closeDetail() {
-  document.getElementById('detailView').classList.remove('active');
-}
-
-// ==================== LEARNING VIEW ====================
+// ==================== LEARNING ====================
 let currentLocation = null;
 
-async function openLearning(id, name, day) {
+async function openLearning(id) {
   currentLocation = id;
   const loc = LOCATIONS[id];
   document.getElementById('learningTitle').textContent = loc.name;
@@ -965,54 +596,129 @@ async function openLearning(id, name, day) {
   document.getElementById('learningView').classList.add('active');
 
   let existing = null;
-  try {
-    existing = await getReflection(id);
-  } catch (e) {
-    console.error('데이터 로드 실패:', e);
-  }
+  try { existing = await getReflection(id); } catch (e) { console.error(e); }
+
+  currentPhotos = (existing && existing.photos) ? [...existing.photos] : [];
 
   let html = `
-    <div class="info-box">
-      <h3>${loc.name}</h3>
-      <p>${loc.desc}</p>
-      <span class="card-badge badge-day${loc.day}">${loc.day}일차</span>
-    </div>
+    <div class="info-box"><h3>${loc.name}</h3><p>${loc.desc}</p>
+    <span class="card-badge badge-day${loc.day}">${loc.day}일차</span></div>
     <h2>학습 소감 작성</h2>
   `;
-
   loc.questions.forEach((q, i) => {
     const val = existing ? (existing.answers[i] || '') : '';
-    html += `
-      <p style="font-weight:600; margin-bottom:6px; margin-top:16px;">${i + 1}. ${q}</p>
-      <textarea id="answer_${i}" placeholder="소감을 작성하세요...">${escapeHtml(val)}</textarea>
-    `;
+    html += `<p style="font-weight:600;margin-bottom:6px;margin-top:16px;">${i+1}. ${q}</p>
+    <textarea id="answer_${i}" placeholder="소감을 작성하세요...">${escapeHtml(val)}</textarea>`;
   });
 
+  // 사진 업로드 영역
   html += `
+    <div class="photo-section">
+      <h3>사진 첨부 (최대 ${MAX_PHOTOS}장)</h3>
+      <div class="photo-count" id="photoCount">${currentPhotos.length}/${MAX_PHOTOS}장</div>
+      <div class="photo-grid" id="photoGrid"></div>
+      <div id="uploadProgress"></div>
+      <div class="photo-upload-area" id="photoUploadArea" onclick="document.getElementById('photoInput').click()">
+        <div class="upload-icon">📷</div>
+        <p>터치하여 사진 추가</p>
+        <input type="file" id="photoInput" accept="image/*" multiple onchange="handlePhotoSelect(event, '${id}')">
+      </div>
+    </div>
     <button class="btn-save" id="saveBtn" onclick="saveLearning('${id}')">저장하기</button>
     <div class="saved-indicator" id="savedMsg">저장되었습니다!</div>
   `;
 
   document.getElementById('learningBody').innerHTML = html;
+  renderPhotoGrid(id);
 }
 
-function escapeHtml(text) {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
+function renderPhotoGrid(locationId) {
+  const grid = document.getElementById('photoGrid');
+  const count = document.getElementById('photoCount');
+  const uploadArea = document.getElementById('photoUploadArea');
+
+  if (!grid) return;
+  count.textContent = `${currentPhotos.length}/${MAX_PHOTOS}장`;
+  uploadArea.style.display = currentPhotos.length >= MAX_PHOTOS ? 'none' : 'block';
+
+  if (currentPhotos.length === 0) { grid.innerHTML = ''; return; }
+
+  grid.innerHTML = currentPhotos.map((url, i) => `
+    <div class="photo-thumb">
+      <img src="${url}" alt="사진 ${i+1}" onclick="openPhotoModal('${url}')">
+      <button class="delete-photo" onclick="handleDeletePhoto('${url}', '${locationId}')" title="삭제">×</button>
+    </div>
+  `).join('');
+}
+
+async function handlePhotoSelect(event, locationId) {
+  const files = Array.from(event.target.files);
+  if (files.length === 0) return;
+
+  const remaining = MAX_PHOTOS - currentPhotos.length;
+  if (remaining <= 0) { showToast(`최대 ${MAX_PHOTOS}장까지만 첨부할 수 있습니다.`, true); return; }
+
+  const toUpload = files.slice(0, remaining);
+  if (files.length > remaining) {
+    showToast(`${remaining}장만 추가로 첨부할 수 있습니다.`, true);
+  }
+
+  const progressDiv = document.getElementById('uploadProgress');
+
+  for (let i = 0; i < toUpload.length; i++) {
+    progressDiv.innerHTML = `<div class="photo-uploading">
+      <span>업로드 중 (${i+1}/${toUpload.length})...</span>
+      <div class="photo-progress"><div class="photo-progress-bar" style="width:${Math.round((i/toUpload.length)*100)}%"></div></div>
+    </div>`;
+
+    try {
+      const url = await uploadPhoto(toUpload[i], locationId);
+      currentPhotos.push(url);
+      renderPhotoGrid(locationId);
+    } catch (e) {
+      console.error('업로드 실패:', e);
+      showToast('사진 업로드에 실패했습니다.', true);
+    }
+  }
+
+  progressDiv.innerHTML = '';
+  // Firestore에 사진 URL 즉시 저장
+  try {
+    const docRef = db.collection('students').doc(getDocId());
+    await docRef.set({ name: currentUser.name, class: currentUser.class, number: currentUser.number }, { merge: true });
+    await docRef.update({ [`reflections.${locationId}.photos`]: currentPhotos });
+  } catch (e) { console.error(e); }
+
+  showToast(`${toUpload.length}장 업로드 완료!`);
+  event.target.value = '';
+}
+
+async function handleDeletePhoto(url, locationId) {
+  if (!confirm('이 사진을 삭제하시겠습니까?')) return;
+  try {
+    await deletePhoto(url, locationId);
+    renderPhotoGrid(locationId);
+    showToast('사진이 삭제되었습니다.');
+  } catch (e) {
+    console.error(e);
+    showToast('삭제에 실패했습니다.', true);
+  }
+}
+
+function openPhotoModal(url) {
+  document.getElementById('photoModalImg').src = url;
+  document.getElementById('photoModal').classList.add('active');
+}
+function closePhotoModal() {
+  document.getElementById('photoModal').classList.remove('active');
 }
 
 async function saveLearning(id) {
   const loc = LOCATIONS[id];
   const btn = document.getElementById('saveBtn');
-  btn.disabled = true;
-  btn.textContent = '저장 중...';
-
+  btn.disabled = true; btn.textContent = '저장 중...';
   const answers = [];
-  loc.questions.forEach((q, i) => {
-    answers.push(document.getElementById(`answer_${i}`).value);
-  });
-
+  loc.questions.forEach((q, i) => { answers.push(document.getElementById(`answer_${i}`).value); });
   try {
     await saveReflection(id, answers);
     showToast('저장되었습니다!');
@@ -1020,140 +726,96 @@ async function saveLearning(id) {
     msg.classList.add('show');
     setTimeout(() => msg.classList.remove('show'), 2000);
   } catch (e) {
-    console.error('저장 실패:', e);
+    console.error(e);
     showToast('저장에 실패했습니다. 다시 시도해주세요.', true);
   }
-
-  btn.disabled = false;
-  btn.textContent = '저장하기';
+  btn.disabled = false; btn.textContent = '저장하기';
 }
-
-function closeLearning() {
-  document.getElementById('learningView').classList.remove('active');
-}
+function closeLearning() { document.getElementById('learningView').classList.remove('active'); }
 
 // ==================== ADMIN ====================
 async function renderAdmin() {
   const container = document.getElementById('adminContent');
   container.innerHTML = '<div class="loading-spinner">학생 데이터를 불러오는 중</div>';
-
   try {
-    cachedStudentData = await getAllStudentData();
+    cachedStudentData = await getAllStudentData(true);
   } catch (e) {
-    console.error('데이터 로드 실패:', e);
-    container.innerHTML = '<div class="empty-state"><div class="icon">⚠️</div><p>데이터를 불러오지 못했습니다.</p></div>';
-    return;
+    try { cachedStudentData = await getAllStudentData(false); showToast('오프라인 캐시 데이터입니다.', true); }
+    catch (e2) { container.innerHTML = '<div class="empty-state"><div class="icon">⚠️</div><p>데이터를 불러오지 못했습니다.</p></div>'; return; }
   }
-
   filterAndRenderAdmin();
 }
 
 function filterAndRenderAdmin() {
-  const filterClass = document.getElementById('filterClass').value;
-  const filterName = document.getElementById('filterName').value.toLowerCase();
-
+  const fc = document.getElementById('filterClass').value;
+  const fn = document.getElementById('filterName').value.toLowerCase();
   let students = cachedStudentData;
-
-  if (filterClass) {
-    students = students.filter(s => s.class === filterClass);
-  }
-  if (filterName) {
-    students = students.filter(s => s.name.toLowerCase().includes(filterName));
-  }
-
+  if (fc) students = students.filter(s => s.class === fc);
+  if (fn) students = students.filter(s => s.name.toLowerCase().includes(fn));
   const container = document.getElementById('adminContent');
-
-  if (students.length === 0) {
-    container.innerHTML = `
-      <div class="empty-state">
-        <div class="icon">📭</div>
-        <p>아직 제출된 소감이 없습니다.</p>
-      </div>
-    `;
-    return;
-  }
+  if (students.length === 0) { container.innerHTML = '<div class="empty-state"><div class="icon">📭</div><p>아직 제출된 소감이 없습니다.</p></div>'; return; }
 
   let html = '';
   students.forEach(student => {
-    html += `<div class="student-card">`;
-    html += `<h3>${student.class} ${student.number}번 ${student.name}</h3>`;
-
+    html += `<div class="student-card"><h3>${student.class} ${student.number}번 ${student.name}</h3>`;
     let hasContent = false;
     Object.keys(LOCATIONS).forEach(locId => {
       if (student.reflections[locId]) {
         hasContent = true;
         const loc = LOCATIONS[locId];
-        html += `<div class="reflection-item">`;
-        html += `<div class="reflection-label">${loc.name} (${loc.day}일차)</div>`;
+        html += `<div class="reflection-item"><div class="reflection-label">${loc.name} (${loc.day}일차)</div>`;
         loc.questions.forEach((q, i) => {
-          if (student.reflections[locId].answers[i]) {
+          if (student.reflections[locId].answers && student.reflections[locId].answers[i]) {
             html += `<p style="font-size:0.8rem;color:#64748b;margin-top:6px;">${q}</p>`;
             html += `<div class="reflection-text">${escapeHtml(student.reflections[locId].answers[i])}</div>`;
           }
         });
+        // 사진 표시
+        if (student.reflections[locId].photos && student.reflections[locId].photos.length > 0) {
+          html += `<div class="admin-photos">`;
+          student.reflections[locId].photos.forEach(url => {
+            html += `<img src="${url}" alt="사진" onclick="openPhotoModal('${url}')">`;
+          });
+          html += `</div>`;
+        }
         html += `</div>`;
       }
     });
-
-    if (!hasContent) {
-      html += `<p style="color:var(--text-light);font-size:0.9rem;">아직 작성된 소감이 없습니다.</p>`;
-    }
-
+    if (!hasContent) html += `<p style="color:var(--text-light);font-size:0.9rem;">아직 작성된 소감이 없습니다.</p>`;
     html += `</div>`;
   });
-
   container.innerHTML = html;
 }
 
-// Override filter to use cached data (no re-fetch)
-document.addEventListener('DOMContentLoaded', () => {
-  const filterClass = document.getElementById('filterClass');
-  const filterName = document.getElementById('filterName');
-  if (filterClass) filterClass.onchange = filterAndRenderAdmin;
-  if (filterName) filterName.oninput = filterAndRenderAdmin;
-});
-
 async function exportData() {
   let students = cachedStudentData;
-  if (students.length === 0) {
-    try {
-      students = await getAllStudentData();
-    } catch (e) {
-      showToast('데이터를 불러오지 못했습니다.', true);
-      return;
-    }
-  }
-
-  let text = '제주도 체험학습 - 학생 소감 모음\n';
-  text += '='.repeat(50) + '\n';
+  if (students.length === 0) { try { students = await getAllStudentData(true); } catch (e) { showToast('데이터를 불러오지 못했습니다.', true); return; } }
+  let text = '제주도 체험학습 - 학생 소감 모음\n' + '='.repeat(50) + '\n';
   text += `생성일: ${new Date().toLocaleDateString('ko-KR')}\n\n`;
-
   students.forEach(student => {
-    text += `\n${'─'.repeat(40)}\n`;
-    text += `${student.class} ${student.number}번 ${student.name}\n`;
-    text += `${'─'.repeat(40)}\n`;
-
+    text += `\n${'─'.repeat(40)}\n${student.class} ${student.number}번 ${student.name}\n${'─'.repeat(40)}\n`;
     Object.keys(LOCATIONS).forEach(locId => {
       if (student.reflections[locId]) {
         const loc = LOCATIONS[locId];
         text += `\n[${loc.name}] (${loc.day}일차)\n`;
         loc.questions.forEach((q, i) => {
-          if (student.reflections[locId].answers[i]) {
-            text += `  Q: ${q}\n`;
-            text += `  A: ${student.reflections[locId].answers[i]}\n\n`;
+          if (student.reflections[locId].answers && student.reflections[locId].answers[i]) {
+            text += `  Q: ${q}\n  A: ${student.reflections[locId].answers[i]}\n\n`;
           }
         });
+        if (student.reflections[locId].photos && student.reflections[locId].photos.length > 0) {
+          text += `  사진 ${student.reflections[locId].photos.length}장:\n`;
+          student.reflections[locId].photos.forEach((url, i) => { text += `    ${i+1}. ${url}\n`; });
+          text += '\n';
+        }
       }
     });
   });
-
   const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url;
-  a.download = `체험학습_소감_${new Date().toISOString().split('T')[0]}.txt`;
-  a.click();
-  URL.revokeObjectURL(url);
+  a.href = url; a.download = `체험학습_소감_${new Date().toISOString().split('T')[0]}.txt`;
+  a.click(); URL.revokeObjectURL(url);
 }
 </script>
 </body>
